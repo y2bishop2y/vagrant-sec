@@ -1,0 +1,12 @@
+---
+# Main task list for webserver role
+
+- name: Update APT repo cache
+  apt: update_cache=yes
+
+- name: install SSLScan 
+  apt: pkg=sslscan state=latest
+
+- name: install Packages
+  apt: pkg={{ item }} state=latest
+  with_items: required_packages

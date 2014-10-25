@@ -1,0 +1,11 @@
+---
+# Ansible playbook for building Caspian microservice running in Vagrant instance
+- name: Playbook for building a Vagrant Box 
+  hosts: all
+  user: vagrant 
+  sudo: True
+  vars:
+    sec_env: true
+  roles: 
+    - { role: sec,   tags: 'sec' }
+

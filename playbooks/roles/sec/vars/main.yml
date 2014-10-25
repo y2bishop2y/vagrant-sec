@@ -1,0 +1,4 @@
+---
+# Packages
+required_packages:
+  - emacs 
